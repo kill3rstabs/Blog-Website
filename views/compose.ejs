@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+<% for (let i =0 ; i<list.length;i++){ %>
+    <p><%= list[i] %></p>
+<% } %>
+<form action="/compose" method="post">
+    <input type="text" name="msg" placeholder="Enter text here">
+    <button type="submit">Compose</button>
+</form>
+<%- include('partials/footer') %>
