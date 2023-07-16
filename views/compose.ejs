@@ -1,9 +1,13 @@
 <%- include('partials/header') %>
-<% for (let i =0 ; i<list.length;i++){ %>
-    <p><%= list[i] %></p>
-<% } %>
+<% for (let i =0 ; i<postList.length;i++){ %>
+    <p><%= postList[i].postTitle %></p>
+    <p><%= postList[i].postMsg%></p>
+<% } %> 
 <form action="/compose" method="post">
-    <input type="text" name="msg" placeholder="Enter text here">
+    <p>Title</p>
+    <input type="text" name="postTitle" placeholder="Enter text here">
+    post
+    <input type="text" name="postMsg" placeholder="Enter text here">
     <button type="submit">Compose</button>
 </form>
 <%- include('partials/footer') %>
